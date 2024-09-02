@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    kotlin("kapt")
+
 }
 
 android {
@@ -40,7 +42,15 @@ android {
 
 dependencies {
 
+    implementation(libs.play.services.gcm)
+    val version = "2.6.1"
+    implementation("androidx.room:room-runtime:$version")
+    implementation("androidx.room:room-ktx:$version")
+    kapt("androidx.room:room-compiler:$version")
 
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$version")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
