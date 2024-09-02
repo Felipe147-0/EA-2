@@ -24,5 +24,5 @@ interface DiaryEntryDao {
     suspend fun delete(diary: DiaryEntry): Int
 
     @Query("SELECT * FROM diary WHERE id = :id LIMIT 1")
-    suspend fun getById(id: Int): DiaryEntry
+    suspend fun getById(id: Long): DiaryEntry
 }

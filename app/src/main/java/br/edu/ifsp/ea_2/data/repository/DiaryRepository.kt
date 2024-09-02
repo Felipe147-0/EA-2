@@ -20,6 +20,12 @@ class DiaryRepository (context: Context){
     suspend fun remove(diary: DiaryEntry): Boolean{
         return dao.delete(diary) > 0
     }
+    suspend fun findById(id: Long): DiaryEntry{
+        return dao.getById(id)
+    }
+    suspend fun findAll(): List<DiaryEntry>{
+        return dao.getAll()
+    }
 
 
 }
