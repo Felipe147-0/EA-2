@@ -6,7 +6,7 @@ import br.edu.ifsp.ea_2.data.model.DiaryEntry
 
 
 
-class diaryRepository (context: Context){
+class DiaryRepository (context: Context){
 
     private val database = AppDatabase.getInstance(context)
     private val dao = database.getDiaryEntryDao()

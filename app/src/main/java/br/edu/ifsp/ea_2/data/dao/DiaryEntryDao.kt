@@ -9,19 +9,19 @@ import br.edu.ifsp.ea_2.data.model.DiaryEntry
 
 
 @Dao
-interface diaryEntryDao {
+interface DiaryEntryDao {
 
     @Insert
-    suspend fun create(diaryEntry: DiaryEntry)
+    suspend fun create(diaryEntry: DiaryEntry): Long
 
     @Query("SELECT * FROM diary ORDER BY date")
     suspend fun getAll(): List<DiaryEntry>
 
     @Update
-    suspend fun update(diary: DiaryEntry)
+    suspend fun update(diary: DiaryEntry): Int
 
     @Delete
-    suspend fun delete(diary: DiaryEntry)
+    suspend fun delete(diary: DiaryEntry): Int
 
     @Query("SELECT * FROM diary WHERE id = :id LIMIT 1")
     suspend fun getById(id: Int): DiaryEntry
