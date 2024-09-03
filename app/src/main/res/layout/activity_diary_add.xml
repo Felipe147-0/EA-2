@@ -31,7 +31,7 @@
         android:text="Note:"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/edittext_note_field"
+        app:layout_constraintBottom_toBottomOf="@id/edittext_note_field"/>
 
     <EditText
         android:id="@+id/edittext_note_field"
