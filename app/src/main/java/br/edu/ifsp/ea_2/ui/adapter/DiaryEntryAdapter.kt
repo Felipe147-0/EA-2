@@ -30,11 +30,11 @@ class DiaryEntryAdapter (private val listener: DiaryEntryItemClickListener) :
             holder.binding.buttonDelete.setOnClickListener {
                 listener.clickDelete(diaryEntry.id)
             }
-            /*
-            holder.binding. setOnLongClickListener {                        // resolver
-                listener.clickOpen(position)
+
+            holder.itemView.setOnLongClickListener {
+                listener.clickOpen(diaryEntry.id)
                 true
-            }*/
+            }
         }
 
         override fun getItemCount(): Int {
