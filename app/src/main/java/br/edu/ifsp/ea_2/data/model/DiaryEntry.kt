@@ -9,20 +9,20 @@ data class DiaryEntry (
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    val id: Long,
+    var id: Long = 0,
 
     @ColumnInfo(name ="title")
-    val title: String,
+    var title: String,
 
     @ColumnInfo(name ="note")
-    val note: String,
+    var note: String,
 
     @ColumnInfo(name ="location")
-    val location: String,
+    var location: String,
 
     @ColumnInfo(name ="date")
-    val date: String,
+    var date: String,
 
     @ColumnInfo(name ="time")
-    val time: String
+    var time: String
 )
